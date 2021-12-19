@@ -13,6 +13,33 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+
+        \App\Models\Service::create([
+            'name' => 'Gigi',
+            'service_photo_path' => env('APP_URL') . '/storage/assets/service/Tooth.jpg'
+        ]);
+        \App\Models\Service::create([
+            'name' => 'Kesehatan',
+            'service_photo_path' => env('APP_URL') . '/storage/assets/service/Fever.jpg'
+
+        ]);
+        \App\Models\Service::create([
+            'name' => 'Kandungan',
+            'service_photo_path' => env('APP_URL') . '/storage/assets/service/Pregnant.jpg'
+
+        ]);
+
+        \App\Models\QueueStatus::create([
+            'slug' => 'in-prosess',
+            'status' => 'In Prosess'
+        ]);
+        \App\Models\QueueStatus::create([
+            'slug' => 'past',
+            'status' => 'Selesai'
+        ]);
+        \App\Models\QueueStatus::create([
+            'slug' => 'canceled',
+            'status' => 'Canceled'
+        ]);
     }
 }

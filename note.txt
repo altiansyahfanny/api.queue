@@ -1,0 +1,39 @@
+User -> klik buat antrean -> antrean di simpan di database (table queue)
+
+
+
+
+user :
+id              : 1
+name            : altiansyah fanny
+email           : altiansyahfanny21@gmail.com
+password        :
+phone_number    :
+address         :
+my_queue        : select * from queue where id_user = ...
+
+queue :
+id              : 1
+id_user         : 1
+id_service      : 1
+id_queue_status : 1
+
+service : 
+id              : 1
+name            : gigi
+photo_path      : 
+jumlah antrean sekarang : select * from queue where id_service = ... and id_status = 1 or 2 
+
+queue_status :
+id              : 1
+status          : dalam antrian
+id              : 2
+status          : dalam pengerjaan
+id              : 3
+status          : selesai
+
+
+validasi daftar antrian
+cek apakah dia sudah mendaftar di service yang sama pada hari yang sama
+
+perbaiki data jumlah antrian di tampilan saat ingin daftar antrian
